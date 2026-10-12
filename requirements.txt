@@ -1,0 +1,7 @@
+apimoex>=1.4
+requests>=2.31
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+torch>=2.2
+matplotlib>=3.8
