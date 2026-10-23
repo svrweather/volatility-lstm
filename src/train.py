@@ -181,7 +181,7 @@ def main():
     val_dl = DataLoader(WindowDataset(X_val, y_val), batch_size=64)
     test_dl = DataLoader(WindowDataset(X_te, y_te), batch_size=64)
 
-    model = PredictionModel(len(FEATURES), args.hidden, args.layers).to(device)
+    model = PredictionModel(len(FEATURES), args.hidden, args.layers, custom=True).to(device)
     history = fit(model, train_dl, val_dl, device, args.epochs, args.lr, args.patience)
 
     y = align(y_te)
